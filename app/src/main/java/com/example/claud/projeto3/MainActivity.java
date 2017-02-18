@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         checkboxValidacao(hasHank,hasEric,hasDiana,hasShela,hasBobby, hasPresto);
 
         display(resposta );
-        resposta = " ";
+        resposta = "";
         pontos = 0;
     }
 
@@ -171,8 +172,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void display(String resposta){
+
+        EditText nome = (EditText) findViewById(R.id.edit_text_nome);
+        resposta += "\n Nome: " + nome + "\n";
         TextView apresentacao = (TextView) findViewById(R.id.txt_resposta);
+
         resposta += "\n \n Sua pontuação: "+ pontos;
         apresentacao.setText(resposta);
+        resposta = "";
     }
 }
