@@ -173,11 +173,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void display(String resposta){
 
+        TextView apresentacao = (TextView) findViewById(R.id.txt_resposta);
+        resposta += "\n \n Sua pontuação: "+ pontos;
+
         EditText nome = (EditText) findViewById(R.id.edit_text_nome);
         resposta += "\n Nome: " + nome + "\n";
-        TextView apresentacao = (TextView) findViewById(R.id.txt_resposta);
-
-        resposta += "\n \n Sua pontuação: "+ pontos;
         apresentacao.setText(resposta);
         resposta = "";
     }
