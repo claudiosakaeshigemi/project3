@@ -14,17 +14,17 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:background="@color/azul_cinzento"
+        android:background="@color/brown200"
         tools:context="com.example.claud.projeto3.MainActivity">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="179dp"
             >
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:src="@drawable/logo_n"
                 android:id="@+id/imageView"
@@ -196,9 +196,7 @@
                 android:onClick="armaMagica"
                 android:id="@+id/radio_invisivel"
                 />
-
         </RadioGroup>
-
 
         <TextView
             android:layout_width="match_parent"
@@ -209,7 +207,6 @@
             android:textColor="@android:color/black"
             android:textSize="16sp"
             />
-
 
         <CheckBox
             android:layout_width="wrap_content"
@@ -254,7 +251,6 @@
             android:text="Bobby"
             />
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -269,19 +265,16 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             >
+
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Confirm"
                 android:textColor="@android:color/black"
-                android:background="@android:color/background_light"
+                android:background="@color/colorPrimaryDark"
                 android:onClick="validar"
                 android:layout_gravity="center_horizontal"
                 />
         </RelativeLayout>
-
-
     </LinearLayout>
-
-
 </ScrollView>
