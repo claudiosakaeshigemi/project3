@@ -73,29 +73,30 @@ public class MainActivity extends AppCompatActivity {
 
     public String checkboxValidacao(boolean hasHank, boolean hasEric, boolean hasDiana, boolean hasShela, boolean hasBobby, boolean hasPresto) {
 
+        resposta += "\n \n PERSONAGENS FAVORITOS: ";
 
         if (hasHank) {
-            resposta += "\n \n Hank:Boa escolha ! Um verdadeiro líder! ";
+            resposta += "\n Hank: Boa escolha ! Um verdadeiro líder! ";
         }
 
         if (hasEric) {
-            resposta += "\n \n Eric:Palhaço do grupo mas, no final ele está lá pelos seus amigos!";
+            resposta += " \n Eric: Palhaço do grupo mas, no final ele está lá pelos seus amigos!";
         }
 
         if (hasDiana) {
-            resposta += "\n \n Diana:Uma das minhas favoritas também:Segundo em comando. Sabe tomar as decisões quando é necessário.  ";
+            resposta += " \n Diana: Uma das minhas favoritas também:Segundo em comando. Sabe tomar as decisões quando é necessário.  ";
         }
 
         if (hasShela) {
-            resposta += "\n \n Sheila:Bom gosto! Ela é o Coração da equipe.";
+            resposta += "\n Sheila: Bom gosto! Ela é o Coração da equipe.";
         }
 
         if (hasBobby) {
-            resposta += "\n \n Bobby:O meu favorito: Meio esquentadinho do grupo,mas, está sempre disposto a proteger a sua irmã!";
+            resposta += " \n Bobby: O meu favorito: Meio esquentadinho do grupo,mas, está sempre disposto a proteger a sua irmã!";
         }
 
         if (hasPresto) {
-            resposta += "\n \n O nerd do grupo.";
+            resposta += " \n Presto: O nerd do grupo.";
         }
         return resposta;
     }
@@ -163,6 +164,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void display(String resposta) {
         EditText nome = (EditText) findViewById(R.id.edit_text_nome);
+        EditText favoritos = (EditText) findViewById(R.id.edit_text_desenhosfavoritos);
+        resposta += "\n \n DESENHOS FAVORITOS: " + favoritos.getText().toString();
         resposta += "\n \n Sua pontuação: " + pontos;
         resposta += "\n \n Realizado por : " + nome.getText().toString();
         TextView apresentacao = (TextView) findViewById(R.id.txt_resposta);
