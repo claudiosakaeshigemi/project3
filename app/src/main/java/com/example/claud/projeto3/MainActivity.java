@@ -105,26 +105,26 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.radio_forte:
                 if (checkedArmaMagica) {
-                    resposta += "\n \n Errado. A capa concede um outro poder. \n ";
+                    resposta += "\n \n Errado. A capa concede um outro poder.";
                     break;
                 }
 
             case R.id.radio_rapida:
                 if (checkedArmaMagica) {
-                    resposta += "\n \n Errado. A capa concede um outro poder. \n ";
+                    resposta += "\n \n Errado. A capa concede um outro poder.";
                     break;
                 }
 
             case R.id.radio_inteligente:
                 if (checkedArmaMagica) {
-                    resposta += "\n \n Errado. A capa concede um outro poder. \n ";
+                    resposta += "\n \n Errado. A capa concede um outro poder.";
                     break;
                 }
 
             case R.id.radio_invisivel:
                 if (checkedArmaMagica) {
                     pontos += 5;
-                    resposta += " \n \n Correto! Deixar ela invisível. ";
+                    resposta += " \n \n Correto! Deixar ela invisível.";
                     break;
                 }
         }
@@ -163,16 +163,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void display(String resposta) {
         EditText nome = (EditText) findViewById(R.id.edit_text_nome);
-
         resposta += "\n \n Sua pontuação: " + pontos;
-
         resposta += "\n \n Realizado por : " + nome.getText().toString();
-
         TextView apresentacao = (TextView) findViewById(R.id.txt_resposta);
-
         apresentacao.setText(resposta);
-
-
     }
 
 }
