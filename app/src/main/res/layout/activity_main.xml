@@ -31,12 +31,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="Quiz "
+                android:text="@string/txt_quiz"
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="45sp"
                 android:textStyle="bold" />
         </RelativeLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_nomeLider"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            />
 
         <EditText
             android:id="@+id/edit_text_nome"
@@ -50,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="O mascote de bobby é um(a):"
+            android:text="@string/txt_mascote"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -71,14 +78,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="RadioMascote"
-                    android:text="Fada" />
+                    android:text="@string/txt_Fada" />
 
                 <RadioButton
                     android:id="@+id/radio_unicornio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="RadioMascote"
-                    android:text="Unicórnio" />
+                    android:text="@string/txt_unicornio" />
 
 
                 <RadioButton
@@ -86,11 +93,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="RadioMascote"
-                    android:text="dragão" />
+                    android:text="@string/txt_dragao" />
 
             </RadioGroup>
-
-
         </LinearLayout>
 
         <TextView
@@ -98,7 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Quem na série foi nomeado(a) um Bárbaro?E quem é nomeado(a) Acrobata?"
+            android:text="@string/txt_barbaro_acrobata"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
 
@@ -112,35 +117,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="nome"
-                android:text="Eric e Hank" />
+                android:text="@string/txt_erick_hana" />
 
             <RadioButton
                 android:id="@+id/radio_eric_e_presto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="nome"
-                android:text="Eric e Presto" />
+                android:text="@string/txt_eric_presto" />
 
             <RadioButton
                 android:id="@+id/radio_bobby_e_diana"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="nome"
-                android:text="Bobby e Diana" />
+                android:text="@string/txt_bobby_diana" />
 
             <RadioButton
                 android:id="@+id/radio_diana_e_sheila"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="nome"
-                android:text="Diana e Sheila" />
+                android:text="@string/txt_diana_sheila" />
         </RadioGroup>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Qual era o poder da arma mágica de Sheila ? "
+            android:text="@string/txt_arma_sheila"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -155,35 +160,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="armaMagica"
-                android:text="Deixar ela mais forte." />
+                android:text="@string/txt_forte" />
 
             <RadioButton
                 android:id="@+id/radio_rapida"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="armaMagica"
-                android:text="Deixar ela mais rápida." />
+                android:text="@string/txt_rapida" />
 
             <RadioButton
                 android:id="@+id/radio_inteligente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="armaMagica"
-                android:text="Deixar ela mais inteligente." />
+                android:text="@string/txt_inteligente" />
 
             <RadioButton
                 android:id="@+id/radio_invisivel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="armaMagica"
-                android:text="Deixar ela invisível." />
+                android:text="@string/txt_invisivel" />
         </RadioGroup>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Qual(is) personagem(s) era o seu favorito?"
+            android:text="@string/txt_poder_de_ataque"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -229,19 +234,20 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Quais outros desenhos são seus favoritos?"
+            android:text="@string/txt_nome_dragao"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
             android:layout_marginTop="16dp"
             />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Outros desenhos favoritos."
-            android:id="@+id/edit_text_desenhosfavoritos"
+            android:hint="Nome do dragão"
+            android:id="@+id/edit_text_nomeDragao"
             android:background="@android:color/white"
             android:layout_marginTop="16dp"
             />
-
 
         <TextView
             android:id="@+id/txt_resposta"

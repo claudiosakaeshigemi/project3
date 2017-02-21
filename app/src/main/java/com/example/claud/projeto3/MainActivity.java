@@ -13,12 +13,65 @@ public class MainActivity extends AppCompatActivity {
 
     String resposta = "";
     int pontos = 0;
+    String  lider = "Hank" ;
+    String  nomeDoDragao = "Tiamat" ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         resposta = "";
+    }
+
+
+    public void validar(View view) {
+
+        EditText editTextNomeLider = (EditText)findViewById(R.id.edit_text_nome);
+        EditText editTextNomeDragao = (EditText)findViewById(R.id.edit_text_nomeDragao);
+        nomeLider(editTextNomeLider);
+
+        CheckBox hank = (CheckBox) findViewById(R.id.checkbox_hank);
+        boolean hasHank = hank.isChecked();
+
+        CheckBox eric = (CheckBox) findViewById(R.id.checkbox_eric);
+        boolean hasEric = eric.isChecked();
+
+        CheckBox diana = (CheckBox) findViewById(R.id.checkbox_diana);
+        boolean hasDiana = diana.isChecked();
+
+        CheckBox sheila = (CheckBox) findViewById(R.id.checkbox_sheila);
+        boolean hasShela = sheila.isChecked();
+
+        CheckBox bobby = (CheckBox) findViewById(R.id.checkbox_bobby);
+        boolean hasBobby = bobby.isChecked();
+
+        CheckBox presto = (CheckBox) findViewById(R.id.checkbox_presto);
+        boolean hasPresto = presto.isChecked();
+
+        checkboxValidacao(hasHank, hasEric, hasDiana, hasShela, hasBobby, hasPresto);
+        nomeDoDragao( editTextNomeDragao );
+
+        display(resposta);
+        resposta = "";
+        pontos = 0;
+    }
+    private String nomeLider(EditText nomeLider){
+        if ( lider.equalsIgnoreCase( nomeLider.getText( ).toString( ) ) ) {
+            resposta += "\n \n NOME DO LIDER:  Correto! O líder é o Hank! ";
+            pontos += 5;
+        } else {
+            resposta += "\n \n NOME DO LIDER:";
+        }
+        return resposta;
+    }
+    private String nomeDoDragao(EditText nomeDragrao){
+        if ( nomeDoDragao.equalsIgnoreCase( nomeDragrao.getText( ).toString( ) ) ) {
+            resposta += "\n \n NOME DO DRAGÃO: Correto! O nome do Dragão é Tiamat.";
+            pontos += 5;
+        } else {
+            resposta += "\n \n NOME DO DRAGÃO: Tente novamente.";
+        }
+        return resposta;
     }
 
     public void RadioMascote(View view) {
@@ -44,59 +97,34 @@ public class MainActivity extends AppCompatActivity {
                 }
         }
     }
-
-    public void validar(View view) {
-
-        CheckBox hank = (CheckBox) findViewById(R.id.checkbox_hank);
-        boolean hasHank = hank.isChecked();
-
-        CheckBox eric = (CheckBox) findViewById(R.id.checkbox_eric);
-        boolean hasEric = eric.isChecked();
-
-        CheckBox diana = (CheckBox) findViewById(R.id.checkbox_diana);
-        boolean hasDiana = diana.isChecked();
-
-        CheckBox sheila = (CheckBox) findViewById(R.id.checkbox_sheila);
-        boolean hasShela = sheila.isChecked();
-
-        CheckBox bobby = (CheckBox) findViewById(R.id.checkbox_bobby);
-        boolean hasBobby = bobby.isChecked();
-
-        CheckBox presto = (CheckBox) findViewById(R.id.checkbox_presto);
-        boolean hasPresto = presto.isChecked();
-
-        checkboxValidacao(hasHank, hasEric, hasDiana, hasShela, hasBobby, hasPresto);
-        display(resposta);
-        resposta = "";
-        pontos = 0;
-    }
-
     public String checkboxValidacao(boolean hasHank, boolean hasEric, boolean hasDiana, boolean hasShela, boolean hasBobby, boolean hasPresto) {
 
-        resposta += "\n \n PERSONAGENS FAVORITOS: ";
-
         if (hasHank) {
-            resposta += "\n Hank: Boa escolha ! Um verdadeiro líder! ";
+            resposta += "\n Hank: Um arco e flecha realmente tem um bom poder de ataque ";
+            pontos += 5;
         }
 
         if (hasEric) {
-            resposta += " \n Eric: Palhaço do grupo mas, no final ele está lá pelos seus amigos!";
+            resposta += " \n Eric: Possui um escudo! Ótimo para defesa";
         }
 
         if (hasDiana) {
-            resposta += " \n Diana: Uma das minhas favoritas também:Segundo em comando. Sabe tomar as decisões quando é necessário.  ";
+            resposta += " \n Diana: possui um bastão,junto com as suas habilidades acrobátas, faz uma excelente arma!";
+            pontos += 5;
         }
 
         if (hasShela) {
-            resposta += "\n Sheila: Bom gosto! Ela é o Coração da equipe.";
+            resposta += "\n Sheila: Capa Invisível, bom para passar despercebido dos seus oponentes.";
         }
 
         if (hasBobby) {
-            resposta += " \n Bobby: O meu favorito: Meio esquentadinho do grupo,mas, está sempre disposto a proteger a sua irmã!";
+            resposta += " \n Bobby:  Possui uma clava, ótimo para nocautear seus oponentes.";
+            pontos += 5;
         }
 
         if (hasPresto) {
-            resposta += " \n Presto: O nerd do grupo.";
+            resposta += " \n Presto:O mágico do grupo, quando ele acerta a mágica,pode fazer bons danos nos seus oponentes!";
+            pontos += 5;
         }
         return resposta;
     }
@@ -109,7 +137,6 @@ public class MainActivity extends AppCompatActivity {
                     resposta += "\n \n Errado. A capa concede um outro poder.";
                     break;
                 }
-
             case R.id.radio_rapida:
                 if (checkedArmaMagica) {
                     resposta += "\n \n Errado. A capa concede um outro poder.";
@@ -133,7 +160,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void nome(View view) {
         boolean checkedNome = ((RadioButton) view).isChecked();
-
         switch (view.getId()) {
             case R.id.radio_eric_e_diana:
                 if (checkedNome) {
@@ -163,13 +189,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void display(String resposta) {
-        EditText nome = (EditText) findViewById(R.id.edit_text_nome);
-        EditText favoritos = (EditText) findViewById(R.id.edit_text_desenhosfavoritos);
-        resposta += "\n \n DESENHOS FAVORITOS: " + favoritos.getText().toString();
         resposta += "\n \n Sua pontuação: " + pontos;
-        resposta += "\n \n Realizado por : " + nome.getText().toString();
         TextView apresentacao = (TextView) findViewById(R.id.txt_resposta);
         apresentacao.setText(resposta);
     }
-
 }

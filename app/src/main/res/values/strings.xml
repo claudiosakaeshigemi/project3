@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Projeto 3</string>
+    <string name="txt_quiz">Quiz</string>
+    <string name="txt_Fada">Fada</string>
+    <string name="txt_nome_dragao">Qual era o nome do dragão de 5 cabeças?</string>
+    <string name="txt_poder_de_ataque">Quais personagens tinham o maior poder de ataque?</string>
+    <string name="txt_invisivel">Deixar ela invisível.</string>
+    <string name="txt_inteligente">Deixar ela mais inteligente.</string>
+    <string name="txt_rapida">Deixar ela mais rápida.</string>
+    <string name="txt_forte">Deixar ela mais forte.</string>
+    <string name="txt_arma_sheila">Qual era o poder da arma mágica de Sheila ? </string>
+    <string name="txt_diana_sheila">Diana e Sheila</string>
+    <string name="txt_bobby_diana">Bobby e Diana</string>
+    <string name="txt_eric_presto">Eric e Presto</string>
+    <string name="txt_erick_hana">Eric e Hank</string>
+    <string name="txt_barbaro_acrobata">Quem na série foi nomeado um bárbaro?E quem foi um acrobata?</string>
+    <string name="txt_dragao">dragão</string>
+    <string name="txt_unicornio">Unicórnio</string>
+    <string name="txt_mascote">O mascote de bobby é um:</string>
+    <string name="txt_nomeLider">Qual é o nome do líder do grupo?</string>
 </resources>
