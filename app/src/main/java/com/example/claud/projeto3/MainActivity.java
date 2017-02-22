@@ -27,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
     public void validar(View view) {
 
         EditText editTextNomeLider = (EditText)findViewById(R.id.edit_text_nome);
-        EditText editTextNomeDragao = (EditText)findViewById(R.id.edit_text_nomeDragao);
         nomeLider(editTextNomeLider);
+
+        EditText editTextNomeDragao = (EditText)findViewById(R.id.edit_text_nomeDragao);
+
 
         CheckBox hank = (CheckBox) findViewById(R.id.checkbox_hank);
         boolean hasHank = hank.isChecked();
@@ -59,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         if ( lider.equalsIgnoreCase( nomeLider.getText( ).toString( ) ) ) {
             resposta += "\n \n NOME DO LIDER:  Correto! O líder é o Hank! ";
             pontos += 5;
-        } else {
-            resposta += "\n \n NOME DO LIDER:";
+        }else{
+            resposta += "\n \n NOME DO LÍDER: Tente de novo.";
         }
         return resposta;
     }
@@ -192,5 +194,6 @@ public class MainActivity extends AppCompatActivity {
         resposta += "\n \n Sua pontuação: " + pontos;
         TextView apresentacao = (TextView) findViewById(R.id.txt_resposta);
         apresentacao.setText(resposta);
+
     }
 }
